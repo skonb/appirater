@@ -194,6 +194,10 @@ extern NSString *const kAppiraterReminderRequestDate;
 */
 - (BOOL)userHasRatedCurrentVersion;
 
++ (void)clearLaunchHistory;
+
++ (void)unsetReminder;
+
 @end
 
 @interface Appirater(Configuration)

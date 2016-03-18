@@ -729,4 +729,16 @@ static BOOL _alwaysUseMainBundle = NO;
 	}
 }
 
++ (void)clearLaunchHistory{
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    [userDefaults setInteger:0 forKey:kAppiraterUseCount];
+    [userDefaults synchronize];
+}
+
++ (void)unsetReminder{
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    [userDefaults removeObjectForKey:kAppiraterReminderRequestDate];
+    [userDefaults synchronize];
+}
+
 @end
